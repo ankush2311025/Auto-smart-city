@@ -1,0 +1,17 @@
+{
+  "name": "aether-city-digital-twin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Autonomous Multi-Agent Self-Healing Digital Twin for Smart Cities",
+  "scripts": {
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install",
+    "dev": "concurrently -k -n CLIENT,SERVER -c cyan,emerald \"npm --prefix client run dev\" \"npm --prefix server run dev\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "start": "npm --prefix server run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
